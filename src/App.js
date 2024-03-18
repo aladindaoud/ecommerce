@@ -89,7 +89,7 @@ function App() {
     item.quantity = 1;
 
     try {
-      await axios.post("http://localhost:5000/cartItems", item).then((res) => {
+      await axios.post("https://ecommerce-a3505-default-rtdb.firebaseio.com/cartItems", item).then((res) => {
         if (res !== undefined) {
           setCartItems([...cartItems, { ...item, quantity: 1 }])
         }
